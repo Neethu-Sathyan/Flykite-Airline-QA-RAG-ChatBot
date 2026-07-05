@@ -1,1 +1,2 @@
 pandas==2.2.2
+huggingface_hub==0.32.6
