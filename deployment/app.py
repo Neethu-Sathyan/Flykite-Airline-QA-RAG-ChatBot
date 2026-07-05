@@ -66,7 +66,7 @@ def load_retriever():
         with st.spinner("Astra DB collection is empty. Ingesting PDF..."):
             loader = PyPDFLoader(PDF_PATH)
             docs = loader.load()
-            splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
+            splitter = RecursiveCharacterTextSplitter(
                     chunk_size=256,
                     chunk_overlap=20)
             chunks = splitter.split_documents(docs)
